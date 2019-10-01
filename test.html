@@ -1,0 +1,11 @@
+<!-- Whatever is typed here will persist -->
+<!DOCTYPE html> 
+<title>Offline Text Editor</title>
+<style>
+  body { font: 2rem/1.5 monospace;max-width:60rem;margin:0 auto;padding:4rem;}
+</style>
+<body>
+<script>
+  (function(d){l=localStorage,k='c',q=d.body;q.contentEditable=true;q.innerHTML=l[k]||'';q.onkeyup=function(){l[k]=q.innerHTML;}})(document);
+</script>
+</body>
