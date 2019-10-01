@@ -1,14 +1,19 @@
 <!-- Whatever is typed here will persist -->
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <title>Offline Text Editor</title>
 <style>
-  <h1>
-    Whatever is typed here will be stored in localStorage.
-  </h1>
-  body { font: 2rem/1.5 monospace;max-width:60rem;margin:0 auto;padding:4rem;background-color:coral; }
+  body {
+    font: 2rem/1.5 monospace;
+    max-width: 60rem;
+    margin: 0 auto;
+    padding: 4rem;
+    background-color: coral;
+  }
 </style>
+
 <body>
-<script>
-  (function(d){l=localStorage,k='c',q=d.body;q.contentEditable=true;q.innerHTML=l[k]||'';q.onkeyup=function(){l[k]=q.innerHTML;}})(document);
-</script>
+  <h1>Whatever is typed here will be stored in localStorage. </h1>
+  <script>
+    (function (d) { l = localStorage, k = 'c', q = d.body; q.contentEditable = true; q.innerHTML = l[k] || ''; q.onkeyup = function () { l[k] = q.innerHTML; } })(document);
+  </script>
 </body>
